@@ -10,7 +10,9 @@ https://learnvimscriptthehardway.stevelosh.com/
 - https://github.com/python-mode/python-mode
 - https://github.com/Yggdroot/indentLine
 - https://github.com/kien/ctrlp.vim
- * let g:ctrlp_map = '<c-p>'
+ ```
+  * let g:ctrlp_map = '<c-p>'
+ ```
 - https://github.com/tpope/vim-surround
 
 # colortheme
