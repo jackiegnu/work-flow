@@ -10,6 +10,8 @@ https://learnvimscriptthehardway.stevelosh.com/
 - https://github.com/python-mode/python-mode
 - https://github.com/Yggdroot/indentLine
 - https://github.com/kien/ctrlp.vim
+- https://github.com/fatih/vim-go
+- https://github.com/brooth/far.vim
  ```
   * let g:ctrlp_map = '<c-p>'
  ```
@@ -25,6 +27,8 @@ https://learnvimscriptthehardway.stevelosh.com/
 - https://vimawesome.com/
 - https://vimawesome.com/plugin/vim-airline-superman
 
+# books
+- https://learnvimscriptthehardway.stevelosh.com/
 
 # misc
 ```
