@@ -8,9 +8,23 @@ https://learnvimscriptthehardway.stevelosh.com/
 - https://github.com/mhinz/vim-startify
 - https://github.com/preservim/nerdtree
 - https://github.com/python-mode/python-mode
+```vim
+let g:pymode_doc_bind = 'K'
+let g:pymode_doc = 1
+let g:pymode_python = 'python3'
+let g:pymode_options = 1
+let g:pymode_lint = 1
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe']
+let g:pymode_rope_show_doc_bind = '<C-]>'
+let g:pymode_rope_completion = 1
+```
 - https://github.com/Yggdroot/indentLine
 - https://github.com/kien/ctrlp.vim
- * let g:ctrlp_map = '<c-p>'
+- https://github.com/fatih/vim-go
+- https://github.com/brooth/far.vim
+ ```
+  * let g:ctrlp_map = '<c-p>'
+ ```
 - https://github.com/tpope/vim-surround
 
 # colortheme
@@ -23,6 +37,8 @@ https://learnvimscriptthehardway.stevelosh.com/
 - https://vimawesome.com/
 - https://vimawesome.com/plugin/vim-airline-superman
 
+# books
+- https://learnvimscriptthehardway.stevelosh.com/
 
 # misc
 ```
