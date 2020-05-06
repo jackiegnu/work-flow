@@ -8,7 +8,6 @@ let g:mapleader=','
 " :help ctrlp-mappings
 " {{{1
 " -------------------------------------------------------------------------------------
-"
 let g:ctrlp_map = '<leader><c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
@@ -20,14 +19,20 @@ let g:ctrlp_custom_ignore = {
                   \ 'link': 'some_bad_symbolic_links',
                   \ }
 
-let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
-" " Use fd for ctrlp.
+" Use fd for ctrlp.
 " if executable('fd')
-"     let g:ctrlp_user_command = 'fd -c never "" "%s"'
-"     let g:ctrlp_use_caching = 0
-" else
-" 	let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
-" endif
+if executable('ag')
+    " Use Ag over Grep
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+    let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+    " ag is fast enough that CtrlP doesn't need to cache
+    let g:ctrlp_use_caching = 0
+else
+    let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
+endif
 " }}}1
 " -------------------------------------------------------------------------------------
 "
@@ -133,5 +138,85 @@ let g:pymode_rope_completion = 1
 let g:pymode_rope_autoimport = 0
 let g:pymode_rope_autoimport_import_after_complete = 0
 let g:pymode_rope_autoimport_modules = ['os', 'shutil', 'datetime']
+"
 "-------------------------------------------------------------------------------------
+" UltiSnips
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical""
+"
+"-------------------------------------------------------------------------------------
+" fzf customize
+"-------------------------------------------------------------------------------------
+" Default fzf layout
+" - down / up / left / right
+let g:fzf_layout = { 'down': '~40%' }
+
+" You can set up fzf window using a Vim command (Neovim or latest Vim 8 required)
+" let g:fzf_layout = { 'window': 'enew' }
+" let g:fzf_layout = { 'window': '-tabnew' }
+" let g:fzf_layout = { 'window': '10new' }
+
+" Customize fzf colors to match your color scheme
+" - fzf#wrap translates this to a set of `--color` options
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+nnoremap <leader>fl :Files<cr>
+nnoremap <leader>ag :Ag<cr>
+nnoremap <leader>bf :Buffers<cr>
+
+" Enable per-command history
+" - History files will be stored in the specified directory
+" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
+"   'previous-history' instead of 'down' and 'up'.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+"
+"-------------------------------------------------------------------------------------
+" Ack/ag
+"-------------------------------------------------------------------------------------
+let g:ackprg = "ag --vimgrep"
+cnoreabbrev Ack Ack!
+nnoremap <Leader>ac :Ack!<Space>
+"
+"-------------------------------------------------------------------------------------
+" Tagbar
+"-------------------------------------------------------------------------------------
+nmap <leader>tb :TagbarToggle<CR>
+"
+"-------------------------------------------------------------------------------------
+" deoplete
+"-------------------------------------------------------------------------------------
+" Change clang binary path
+call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
+
+" Change clang options
+call deoplete#custom#var('clangx', 'default_c_options', '')
+call deoplete#custom#var('clangx', 'default_cpp_options', '')
+
+set pyxversion=3
+
+" disable deoplete plugin due to using Coc currently
+let g:deoplete#enable_at_startup = 0
+let g:python3_host_prog='/home/ubuntu/anaconda3/bin/python3'
+
+"-------------------------------------------------------------------------------------
+" vim-gitgutter
+"-------------------------------------------------------------------------------------
+set updatetime=100 " 100ms
+"
 " vim: ft=vim:sw=4:sts=4:expandtab:ts=4

@@ -39,7 +39,7 @@ Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
-Plug 'python-mode/python-mode'
+" Plug 'python-mode/python-mode'
 Plug 'vim-airline/vim-airline'
 " Plug 'vim-scripts/minibufexplorerpp'
 Plug 'fholgado/minibufexpl.vim'
@@ -52,7 +52,50 @@ if v:version > 800
     Plug 'valloric/youcompleteme'
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 endif
-" Plug 'brooth/far.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'brooth/far.vim'
+Plug 'mileszs/ack.vim'
+
+" Dependencies: ctag
+Plug 'majutsushi/tagbar'
+
+Plug 'lfv89/vim-interestingwords'
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+let g:deoplete#enable_at_startup = 1
+set completeopt -=preview
+
+" Asynchronous C/C++/Objective-C/Objective-C++ completion for Neovim.
+Plug 'Shougo/deoplete-clangx'
+
+" Asynchronous Go completion for Neovim.
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
+" python
+Plug 'deoplete-plugins/deoplete-jedi'
+
+" check point
+" :echo has('pythonx')
+" :echo exepath('python3')
+" :echo neovim_rpc#serveraddr()
+
+" git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
+
+Plug 'gu-fan/riv.vim'
+Plug 'gu-fan/InstantRst'
+
 "}}}1
 
 "-------------------------------------------------------------------------------------
@@ -72,6 +115,6 @@ call plug#end()
 "-------------------------------------------------------------------------------------
 " source current vim file
 "-------------------------------------------------------------------------------------
-nnoremap <C-i> :source % <cr>
+nnoremap <leader><C-i> :source % <cr>
 
 " vim: ft=vim:sw=4:sts=4:expandtab:ts=4

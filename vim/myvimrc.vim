@@ -35,6 +35,7 @@ set shortmess=aOstT " Shortens messages to avoid 'press a key' prompt
 set autochdir " Always switch to the current file directory
 set autoread " Set to auto read when a file is changed from the outside
 set colorcolumn=85 " Show color column
+" set spell " spell checking
 " }}}1
 "-------------------------------------------------------------------------------------
 "  K keywordprg
@@ -88,6 +89,7 @@ set foldmethod=marker
 source ~/.vim/mykeymap.vim
 source ~/.vim/myplug.vim
 source ~/.vim/myplugrc.vim
+source ~/.vim/coc.vim
 
 "-------------------------------------------------------------------------------------
 " vim: ft=vim:sw=4:sts=4:expandtab:ts=4
