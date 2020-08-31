@@ -74,6 +74,7 @@ script_install(){
 
     local -A deplist=(
         ["oh-my-zsh"]="bash oh-my-zsh/install.sh"
+        ["zplug"]="git clone --depth 1 https://github.com/zplug/zplug ~/.zplug"
         ["fzf"]="git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install"
     )
 
