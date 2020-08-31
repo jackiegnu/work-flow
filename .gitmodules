@@ -1,0 +1,72 @@
+[submodule ".vim/plugged/bufexplorer.zip"]
+	path = .vim/plugged/bufexplorer.zip
+	url = https://github.com/vim-scripts/bufexplorer.zip.git
+[submodule ".vim/plugged/ctrlp.vim"]
+	path = .vim/plugged/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/plugged/far.vim"]
+	path = .vim/plugged/far.vim
+	url = https://github.com/brooth/far.vim.git
+[submodule ".vim/plugged/fzf.vim"]
+	path = .vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule ".vim/plugged/gocode"]
+	path = .vim/plugged/gocode
+	url = https://github.com/nsf/gocode.git
+[submodule ".vim/plugged/indentLine"]
+	path = .vim/plugged/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule ".vim/plugged/minibufexplorerpp"]
+	path = .vim/plugged/minibufexplorerpp
+	url = https://github.com/vim-scripts/minibufexplorerpp.git
+[submodule ".vim/plugged/minibufexpl.vim"]
+	path = .vim/plugged/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule ".vim/plugged/mru.vim"]
+	path = .vim/plugged/mru.vim
+	url = https://github.com/vim-scripts/mru.vim.git
+[submodule ".vim/plugged/nerdcommenter"]
+	path = .vim/plugged/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule ".vim/plugged/nerdtree"]
+	path = .vim/plugged/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule ".vim/plugged/python-mode"]
+	path = .vim/plugged/python-mode
+	url = https://github.com/python-mode/python-mode.git
+[submodule ".vim/plugged/StripWhiteSpaces"]
+	path = .vim/plugged/StripWhiteSpaces
+	url = https://github.com/vim-scripts/StripWhiteSpaces.git
+[submodule ".vim/plugged/ultisnips"]
+	path = .vim/plugged/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule ".vim/plugged/vim-airline"]
+	path = .vim/plugged/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/plugged/vim-easy-align"]
+	path = .vim/plugged/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule ".vim/plugged/vim-easymotion"]
+	path = .vim/plugged/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule ".vim/plugged/vim-fireplace"]
+	path = .vim/plugged/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace.git
+[submodule ".vim/plugged/vim-github-dashboard"]
+	path = .vim/plugged/vim-github-dashboard
+	url = https://github.com/junegunn/vim-github-dashboard.git
+[submodule ".vim/plugged/vim-go"]
+	path = .vim/plugged/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/plugged/vim-snippets"]
+	path = .vim/plugged/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
+[submodule ".vim/plugged/vim-startify"]
+	path = .vim/plugged/vim-startify
+	url = https://github.com/mhinz/vim-startify.git
+[submodule ".vim/plugged/vim-surround"]
+	path = .vim/plugged/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule ".vim/plugged/YCM-Generator"]
+	path = .vim/plugged/YCM-Generator
+	url = https://github.com/rdnetto/YCM-Generator.git

@@ -1,0 +1,55 @@
+## ===============================================================
+## xterm tweaks
+## ===============================================================
+#defscrollback 100000
+#termcapinfo xterm* OL=100000
+#termcapinfo xterm* ti@:te@
+#
+## ===========================================
+## CAPTION - shows a "caption" for the window.
+## ===========================================
+#caption always "%{+b rk}%H%{gk} | %?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wk}%?%+Lw%? %= %{= KR} %{-}  %{= KG} %{yk}%y.%m.%d %c "
+#startup_message off
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+##    Explanation of hardstatus line    ##
+
+caption always "%{= wk} %{= KY} [%n]%t @ %H %{-} %= %{= KR} %l %{-} | %{= KG} %Y-%m-%d %{-} "
+#hardstatus alwayslastline "%{=b}%{b}%-w%{.BW}%10>%n*%t%{-}%+w%< %=%{kG}%C%A %D, %Y-%m-%d"
+hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %0c:%s "
+
+defscrollback 102400
+
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+##    Some general options    ##
+
+# Turn off start message:
+startup_message off   # default: on
+
+autodetach on      # default: on
+
+# Set messages timeout to one second:
+msgwait 1
+
+#use bash as default shell.
+#shell bash
+shell zsh
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+##    Keybindings    ##
+
+# bind F1  to select 1
+# bind F7  to detach screen session from this terminal
+# bind F8  to kill current screen window.
+# bind F9  to create a new screen
+# bind F10 to rename current screen window
+# bind F11 to move to previous window
+# bind F12 to move to next window
+#bindkey -k k1 select 1
+#bindkey -k k7 detach
+#bindkey -k k8 kill
+#bindkey -k k9 screen
+bindkey -k k; title
+bindkey -k F1 prev
+bindkey -k F2 next
+# =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= #
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
