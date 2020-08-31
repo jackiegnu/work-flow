@@ -70,9 +70,24 @@ dl_install_depedencies(){
 }
 
 
+script_install(){
+
+    local -A deplist=(
+        ["oh-my-zsh"]="bash oh-my-zsh/install.sh"
+        ["fzf"]="git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install"
+    )
+
+    for dep in ${!deplist[@]};
+    do
+        debug $dep --- "${deplist[$dep]}"
+        eval ${deplist[$dep]}
+    done
+}
+
 install(){
     apt_install_depedencies
     # dl_install_depedencies
+    script_install
 }
 
 main() {
